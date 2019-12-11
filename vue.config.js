@@ -7,7 +7,26 @@ function resolve(dir) {
 
 module.exports = {
     devServer: {
-        port: 6666,
+        host: '0.0.0.0', // 允许外部ip访问
+        port: 8686,
+        open: true,
+        overlay: {
+            warnings: false,
+            errors: true
+        }
+    },
+    css: {
+        loaderOptions: {
+          postcss: {
+            plugins: [
+              require('postcss-pxtorem')({ // 把px单位换算成rem单位
+                rootValue: 32, // 换算的基数(设计图750的根字体为32)
+                // selectorBlackList: ['weui', 'mu'], // 忽略转换正则匹配项
+                propList: ['*']
+              })
+            ]
+          }
+        }
     },
     configureWebpack: {
         name: name,
