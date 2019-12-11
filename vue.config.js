@@ -7,14 +7,7 @@ function resolve(dir) {
 
 module.exports = {
     devServer: {
-        host: '0.0.0.0', // 允许外部ip访问
         port: 6666,
-        open: true,
-        overlay: {
-            warnings: false,
-            errors: true
-        },
-        proxy: {},
     },
     configureWebpack: {
         name: name,
