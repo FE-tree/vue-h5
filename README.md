@@ -4,10 +4,10 @@ Building mobile terminal general shelf based on Vue
 
 ---
 
-+ [x] 常用目录别名
-+ [x] Rem适配
++ [x] 常用目录别名 (resolve alias path)
++ [x] Rem适配 (postcss-pxtorem)
 + [x] CSS reset (Normalize.css)
-+ [ ] svg封装
++ [x] svg封装
 + [ ] 
 
 

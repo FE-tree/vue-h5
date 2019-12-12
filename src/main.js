@@ -6,7 +6,9 @@ import store from './store'
 import 'normalize.css/normalize.css'
 import './style/common.scss'
 
-import './utils/pxtorem'
+// import './utils/pxtorem'
+
+import '@/icons' // icon
 
 Vue.config.productionTip = false
 
