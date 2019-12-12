@@ -6,8 +6,8 @@ Building mobile terminal general shelf based on Vue
 
 + [x] 常用目录别名
 + [x] Rem适配
++ [x] CSS reset (Normalize.css)
 + [ ] svg封装
-+ [ ] 
 + [ ] 
 
 
