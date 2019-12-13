@@ -39,6 +39,7 @@ export default {
   .icon-list {
     margin: 15px;
     font-size: 24px;
+    background-color: $theme-bg;
     .icon {
       margin: 0 10px;
     }

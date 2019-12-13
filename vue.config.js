@@ -17,10 +17,16 @@ module.exports = {
     },
     css: {
         loaderOptions: {
+          sass: {
+            // 旧版sass-loader
+            // data: `@import "~@style/global.scss";`     
+            // 新版sass-loader
+            prependData: `@import "~@style/_global.scss";@import "~@style/_mixin.scss";` // 全局引入
+          },
           postcss: {
             plugins: [
               require('postcss-pxtorem')({ // 把px单位换算成rem单位
-                rootValue: 32,         // 换算的基数(设计图750的根字体为32)
+                rootValue: 32, // 换算的基数(设计图750的根字体为32)
                 // selectorBlackList: ['weui', 'mu'], // 忽略转换正则匹配项
                 propList: ['*']
               })
