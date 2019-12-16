@@ -4,7 +4,6 @@ import router from './router'
 import store from './store'
 
 import 'normalize.css/normalize.css'
-import './style/common.scss'
 
 // import './utils/pxtorem'
 
