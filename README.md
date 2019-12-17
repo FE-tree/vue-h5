@@ -10,7 +10,7 @@ Building mobile terminal general shelf based on Vue
 + [x] svg封装 (svg-sprite-loader)
 + [x] sass (支持 _global.sass _mixin.scss)
 + [x] 404页面
-+ [ ] 页面切换动画（keepAlive）
++ [x] 页面切换动画（keepAlive）
 + [ ] 页面标题
 + [ ] axios封装
 
