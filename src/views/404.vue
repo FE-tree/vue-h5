@@ -14,7 +14,9 @@ export default {
     .page404 {
         text-align: center;
         .icon {
-            width: 5rem;
+            width: 10em;
+            height: 10em;
+            margin: 5rem 0;
         }
     }
 </style>

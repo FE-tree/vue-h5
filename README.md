@@ -11,7 +11,8 @@ Building mobile terminal general shelf based on Vue
 + [x] sass (支持 _global.sass _mixin.scss)
 + [x] 404页面
 + [x] 页面切换动画（keepAlive）
-+ [ ] 页面标题
++ [x] 配置多环境变量（development、production）
++ [ ] 页面标题 + vconsole
 + [ ] axios封装
 
 
