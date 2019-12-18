@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 
 import store from '@/store'
+import getPageTitle from '@/utils/get-page-title'
 
 Vue.use(VueRouter)
 
@@ -54,7 +55,9 @@ let historyCount = storage.getItem('count') * 1 || 0
 storage.setItem('/', 0)
 
 router.beforeEach((to, from, next) => {
-    console.log(store.state)
+    // 设置页面标题
+    document.title = getPageTitle(to.meta.title)
+
     if (to.params.direction) {
         store.commit('updateDirection', to.params.direction)
     } else {

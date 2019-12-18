@@ -12,14 +12,14 @@ Building mobile terminal general shelf based on Vue
 + [x] 404页面
 + [x] 页面切换动画（keepAlive）
 + [x] 配置多环境变量（development、production）
-+ [ ] 页面标题 + vconsole
-+ [ ] axios封装
-
-
-+ [ ] 
++ [x] 页面标题 + vconsole
 + [ ] 主题换肤
+
+
++ [ ] axios封装
 + [ ] vuex
 + [ ] 用户鉴权（配合vuex）
++ [ ] 
 
 
 
