@@ -1,0 +1,74 @@
+
+.login {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+}
+
+.wrapper {
+    /*width: 80vw;
+    margin: 0 10vw;*/
+    width: 80%;
+    margin: 0 10%;
+    padding: 1rem 0;
+    border-radius: .6rem;
+    background-color: #fff;
+    box-shadow: 0 0.6rem 1.2rem 0 rgba(0,0,0,.3);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    perspective: 1200;
+    transition: all .5s ease-in;
+    img {
+        width: 50%;
+    }
+}
+
+
+.title {
+    font-size: 1.2rem;
+}
+
+.input-item {
+    padding-top: 1rem;
+}
+.input-item input {
+    text-align: center;
+    border: 1px solid #e9e9e9;
+    border-radius: .3rem;
+    outline: none;
+    padding: .5rem .8rem;
+    background-color: #e9e9e9;
+    transition: all .3s ease-in-out;
+}
+.input-item input[type=text] {
+    letter-spacing: 2px;
+}
+.input-item input[type=text]:focus {
+    background-color: #fff;
+    border-bottom: 0.1rem solid #5fbae9;
+}
+.input-item input[type=password]:focus {
+    background-color: #fff;
+    border-bottom: 0.1rem solid #5fbae9;
+}
+/*.input-item input:placeholder {
+    color: #ff0;
+}*/
+::-webkit-input-placeholder {
+    color:  #ccc;
+}
+
+.input-item .btn {
+    background-color: #5fbae9;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: .3rem;
+    padding: .4rem 0;
+    width: 7rem;
+    margin: 1rem auto;
+}
+.input-item .btn:active {
+    opacity: .8;
+}

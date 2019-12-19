@@ -17,21 +17,21 @@ module.exports = {
     },
     css: {
         loaderOptions: {
-          sass: {
-            // 旧版sass-loader
-            // data: `@import "~@style/global.scss";`     
-            // 新版sass-loader
-            prependData: `@import "~@style/_global.scss";@import "~@style/_mixin.scss";` // 全局引入
-          },
-          postcss: {
-            plugins: [
-              require('postcss-pxtorem')({ // 把px单位换算成rem单位
-                rootValue: 32, // 换算的基数(设计图750的根字体为32)
-                // selectorBlackList: ['weui', 'mu'], // 忽略转换正则匹配项
-                propList: ['*']
-              })
-            ]
-          }
+            sass: {
+                // 旧版sass-loader
+                // data: `@import "~@style/global.scss";`     
+                // 新版sass-loader
+                prependData: `@import "~@style/_global.scss";@import "~@style/_mixin.scss";` // 全局引入
+            },
+            postcss: {
+                plugins: [
+                    require('postcss-pxtorem')({ // 把px单位换算成rem单位
+                        rootValue: 32, // 换算的基数(设计图750的根字体为32)
+                        // selectorBlackList: ['weui', 'mu'], // 忽略转换正则匹配项
+                        propList: ['*']
+                    })
+                ]
+            }
         }
     },
     configureWebpack: {
@@ -51,19 +51,19 @@ module.exports = {
     chainWebpack(config) {
         // set svg-sprite-loader
         config.module
-          .rule('svg')
-          .exclude.add(resolve('src/icons'))
-          .end()
+            .rule('svg')
+            .exclude.add(resolve('src/icons'))
+            .end()
         config.module
-          .rule('icons')
-          .test(/\.svg$/)
-          .include.add(resolve('src/icons'))
-          .end()
-          .use('svg-sprite-loader')
-          .loader('svg-sprite-loader')
-          .options({
-            symbolId: 'icon-[name]'
-          })
-          .end()
+            .rule('icons')
+            .test(/\.svg$/)
+            .include.add(resolve('src/icons'))
+            .end()
+            .use('svg-sprite-loader')
+            .loader('svg-sprite-loader')
+            .options({
+                symbolId: 'icon-[name]'
+            })
+            .end()
     }
 }

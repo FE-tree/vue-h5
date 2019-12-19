@@ -17,10 +17,25 @@ let routes = [{
         }
     },
     {
+        path: '/login',
+        name: 'login',
+        component: () => import ( '../views/user/login.vue'),
+        meta: {
+            title: '登录'
+        }
+    },
+    {
+        path: '/register',
+        name: 'register',
+        component: () => import ( '../views/user/register.vue'),
+        meta: {
+            title: '注册'
+        }
+    },
+    {
         path: '/about',
         name: 'about',
-        component: () =>
-            import ( /* webpackChunkName: "about" */ '../views/About.vue'),
+        component: () => import ( '../views/About.vue'),
         meta: {
             title: '关于'
         }
@@ -28,8 +43,7 @@ let routes = [{
     {
         path: '/404',
         name: '404',
-        component: () =>
-            import ( /* webpackChunkName: "404" */ '../views/404.vue'),
+        component: () => import ('../views/404.vue'),
         meta: {
             title: '404',
             keepAlive: true
