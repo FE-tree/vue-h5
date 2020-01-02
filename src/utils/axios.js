@@ -31,10 +31,7 @@ service.interceptors.response.use(
         const res = response.data;
         if (res.code !== 200) {
             console.log(res);
-              // if (res.code === 444) {
-              // } else {
-              // }
-              return Promise.reject("error");
+            return Promise.reject("error");
         } else {
             return response.data;
         }
@@ -45,5 +42,31 @@ service.interceptors.response.use(
         return Promise.reject(error);
     }
 );
+
+// 封装axios的get请求
+export const get = function(url, params) {
+    return new Promise((resolve, reject) => {
+        service.get(url, { params })
+            .then(response => {
+                resolve(response.data)
+            })
+            .catch((error) => {
+                reject(error)
+            })
+    })
+}
+
+// 封装axios的post请求
+export const post = function(url, params) {
+    return new Promise((resolve, reject) => {
+        service.post(url, params)
+            .then(response => {
+                resolve(response.data)
+            })
+            .catch((error) => {
+                reject(error)
+            })
+    })
+}
 
 export default service;
