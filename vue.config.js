@@ -1,6 +1,8 @@
 const path = require('path')
 const name = 'VueH5' // page title
 
+import { port } from '@/config'
+
 function resolve(dir) {
     return path.join(__dirname, dir)
 }
@@ -8,7 +10,7 @@ function resolve(dir) {
 module.exports = {
     devServer: {
         host: '0.0.0.0', // 允许外部ip访问
-        port: 8686,
+        port,
         open: true,
         overlay: {
             warnings: false,
