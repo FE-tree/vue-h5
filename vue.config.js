@@ -1,7 +1,7 @@
 const path = require('path')
 const name = 'VueH5' // page title
 
-import { port } from '@/config'
+const { port } = require('./src/config')
 
 function resolve(dir) {
     return path.join(__dirname, dir)
@@ -67,5 +67,9 @@ module.exports = {
                 symbolId: 'icon-[name]'
             })
             .end()
+    },
+    // 第三方插件配置
+    pluginOptions: {
+        // ...
     }
 }
